@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>💕 AWS AI Practitioner — Examen de Práctica 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Perritos salchicha decorativos (canela) caminando -->
+  <div class="dachshund-lane lane-1">
+    <svg class="dachshund" viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+      <ellipse class="tail" cx="14" cy="46" rx="16" ry="6"/>
+      <ellipse class="body" cx="110" cy="50" rx="80" ry="26"/>
+      <rect class="leg leg-back-1" x="60" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-back-2" x="90" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-front-1" x="150" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-front-2" x="178" y="68" width="10" height="26" rx="5"/>
+      <ellipse class="head" cx="196" cy="34" rx="26" ry="20"/>
+      <ellipse class="ear" cx="182" cy="20" rx="9" ry="16"/>
+      <circle class="eye" cx="207" cy="30" r="3"/>
+      <ellipse class="snout" cx="216" cy="40" rx="9" ry="6"/>
+      <circle class="nose" cx="223" cy="39" r="2.6"/>
+    </svg>
+  </div>
+
+  <div class="dachshund-lane lane-2 reverse">
+    <svg class="dachshund" viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+      <ellipse class="tail" cx="14" cy="46" rx="16" ry="6"/>
+      <ellipse class="body" cx="110" cy="50" rx="80" ry="26"/>
+      <rect class="leg leg-back-1" x="60" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-back-2" x="90" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-front-1" x="150" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-front-2" x="178" y="68" width="10" height="26" rx="5"/>
+      <ellipse class="head" cx="196" cy="34" rx="26" ry="20"/>
+      <ellipse class="ear" cx="182" cy="20" rx="9" ry="16"/>
+      <circle class="eye" cx="207" cy="30" r="3"/>
+      <ellipse class="snout" cx="216" cy="40" rx="9" ry="6"/>
+      <circle class="nose" cx="223" cy="39" r="2.6"/>
+    </svg>
+  </div>
+
+  <div class="dachshund-lane lane-3">
+    <svg class="dachshund small" viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+      <ellipse class="tail" cx="14" cy="46" rx="16" ry="6"/>
+      <ellipse class="body" cx="110" cy="50" rx="80" ry="26"/>
+      <rect class="leg leg-back-1" x="60" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-back-2" x="90" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-front-1" x="150" y="68" width="10" height="26" rx="5"/>
+      <rect class="leg leg-front-2" x="178" y="68" width="10" height="26" rx="5"/>
+      <ellipse class="head" cx="196" cy="34" rx="26" ry="20"/>
+      <ellipse class="ear" cx="182" cy="20" rx="9" ry="16"/>
+      <circle class="eye" cx="207" cy="30" r="3"/>
+      <ellipse class="snout" cx="216" cy="40" rx="9" ry="6"/>
+      <circle class="nose" cx="223" cy="39" r="2.6"/>
+    </svg>
+  </div>
+
+  <div class="hearts-field" aria-hidden="true">
+    <span>💕</span><span>💗</span><span>🐾</span><span>💓</span><span>🐾</span><span>💖</span>
+  </div>
+
+  <div class="app">
+    <header class="app-header">
+      <h1>🌭💕 Guía de Amor y Estudio 💕🌭</h1>
+      <p class="subtitle">AWS Certified AI Practitioner — Examen de Práctica (65 preguntas)</p>
+      <p class="made-with">Hecho con cariño para que apruebes con todo el corazón, Valentina ✨🐕</p>
+    </header>
+
+    <section id="progress-section" class="progress-section">
+      <div class="progress-bar-outer">
+        <div id="progress-bar-inner" class="progress-bar-inner"></div>
+      </div>
+      <div class="progress-labels">
+        <span id="progress-label">Pregunta 1 de 65</span>
+        <span id="score-label">Correctas: 0</span>
+      </div>
+    </section>
+
+    <main id="quiz-card" class="quiz-card">
+      <!-- El contenido de la pregunta se genera dinámicamente -->
+    </main>
+
+    <div id="nav-buttons" class="nav-buttons">
+      <button id="prev-btn" class="btn btn-secondary">⬅️ Anterior</button>
+      <button id="restart-btn" class="btn btn-secondary">🔄 Reiniciar</button>
+      <button id="next-btn" class="btn btn-secondary">Siguiente ➡️</button>
+    </div>
+
+    <footer class="app-footer">
+      <p>Con todo mi corazón 💗 — Guía basada en el examen de práctica de AWS AI Practitioner</p>
+    </footer>
+  </div>
+
+  <div id="confetti-layer" aria-hidden="true"></div>
+
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
