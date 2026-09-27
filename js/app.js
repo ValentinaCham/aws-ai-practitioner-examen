@@ -6,6 +6,7 @@
   const state = {
     current: 0,
     answers: new Array(QUESTIONS.length).fill(null), // cada item: { selected: [keys], submitted: bool, correct: bool }
+    translated: new Array(QUESTIONS.length).fill(false), // true = mostrar questionEs en vez de question
   };
 
   const quizCard = document.getElementById("quiz-card");
@@ -25,6 +26,9 @@
       if (saved && Array.isArray(saved.answers) && saved.answers.length === QUESTIONS.length) {
         state.answers = saved.answers;
         state.current = Math.min(saved.current || 0, QUESTIONS.length);
+        state.translated = Array.isArray(saved.translated) && saved.translated.length === QUESTIONS.length
+          ? saved.translated
+          : new Array(QUESTIONS.length).fill(false);
       }
     } catch (e) { /* ignore corrupt storage */ }
   }
@@ -51,7 +55,7 @@
     } else {
       progressLabel.textContent = `Pregunta ${idx} de ${total}`;
     }
-    scoreLabel.textContent = `Correctas: ${getScore()} / ${getAnsweredCount()}`;
+    scoreLabel.textContent = `Correctas: ${getScore()} / ${total} (respondidas: ${getAnsweredCount()})`;
   }
 
   function renderOptionItem(question, opt, answer, submitted) {
@@ -162,7 +166,7 @@
       }
       body.textContent = explanation;
     } else {
-      title.textContent = "Casi, cariño 🐕💗 — revisemos juntas por qué";
+      title.textContent = "Casi, cariño 🐕💗 — revisemos juntos por qué";
       const correctList = correctKeys.join(", ");
       body.textContent = `La(s) respuesta(s) correcta(s) era(n): ${correctList}. Debajo te dejo, opción por opción, por qué la correcta sí aplica y por qué las demás no — para que la próxima vuelta a esta pregunta la tengas segurísima. ¡Un dachshund cree en ti! 🌭✨`;
     }
@@ -210,9 +214,21 @@
         ? `Pregunta ${question.id} · Selecciona ${question.pick} opciones`
         : `Pregunta ${question.id} · Selecciona 1 opción`;
 
+    const isTranslated = !!state.translated[idx];
+
     const qText = document.createElement("p");
     qText.className = "question-text";
-    qText.textContent = question.question;
+    qText.textContent = isTranslated ? question.questionEs : question.question;
+
+    const translateBtn = document.createElement("button");
+    translateBtn.type = "button";
+    translateBtn.className = "btn btn-translate";
+    translateBtn.textContent = isTranslated ? "💌 Ver en inglés" : "💌 Para mayor comprensión bb <3";
+    translateBtn.addEventListener("click", () => {
+      state.translated[idx] = !state.translated[idx];
+      saveProgress();
+      renderQuestion();
+    });
 
     const list = document.createElement("div");
     list.className = "options-list";
@@ -222,6 +238,7 @@
 
     quizCard.appendChild(meta);
     quizCard.appendChild(qText);
+    quizCard.appendChild(translateBtn);
     quizCard.appendChild(list);
 
     if (answer.submitted) {
@@ -265,13 +282,13 @@
     let emoji, message;
     if (pct >= 90) {
       emoji = "💖🌭👑";
-      message = "¡Excelencia total! Tienes esto dominado, futura AWS AI Practitioner certificada. ¡Te amo, campeona!";
+      message = "¡Excelencia total! Tienes esto dominado, futuro AWS AI Practitioner certificado. ¡Te amo, campeón!";
     } else if (pct >= 75) {
       emoji = "💗🐾";
-      message = "¡Muy bien hecho! Estás lista para el examen real, solo repasa los detalles que fallaste.";
+      message = "¡Muy bien hecho! Estás listo para el examen real, solo repasa los detalles que fallaste.";
     } else if (pct >= 50) {
       emoji = "🌭💕";
-      message = "Vas por buen camino. Repasemos juntas la teoría de las que fallaste y lo lograrás.";
+      message = "Vas por buen camino. Repasemos juntos la teoría de las que fallaste y lo lograrás.";
     } else {
       emoji = "🐕💌";
       message = "Este es solo el comienzo del entrenamiento. Repasa la guía de teoría y vuelve a intentarlo, ¡confío en ti!";
@@ -320,6 +337,7 @@
     if (confirm("¿Reiniciar todo el examen desde la pregunta 1? 🐾")) {
       state.current = 0;
       state.answers = new Array(QUESTIONS.length).fill(null);
+      state.translated = new Array(QUESTIONS.length).fill(false);
       saveProgress();
       renderQuestion();
     }

@@ -5,6 +5,7 @@ const QUESTIONS = [
   {
     id: 1,
     question: "An organization is developing a model to predict the price of a product based on various features like size, weight, brand and manufacturing date. Which machine learning approach would be best suited for this task?",
+    questionEs: "Una organización está desarrollando un modelo para predecir el precio de un producto según varias características como tamaño, peso, marca y fecha de fabricación. ¿Qué enfoque de machine learning sería el más adecuado para esta tarea?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Classification", correct: false, reason: "Classification predice categorías (ej. 'caro'/'barato'), no un valor numérico continuo como el precio exacto." },
@@ -16,6 +17,7 @@ const QUESTIONS = [
   {
     id: 2,
     question: "A company is expanding its use of artificial intelligence. Which core principle should they prioritize to establish clear guidelines, oversight and accountability for AI development and use?",
+    questionEs: "Una empresa está expandiendo su uso de inteligencia artificial. ¿Qué principio central debería priorizar para establecer lineamientos claros, supervisión y responsabilidad en el desarrollo y uso de la IA?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Bias Prevention", correct: false, reason: "Es un objetivo importante, pero solo cubre el sesgo, no el marco completo de reglas y responsabilidad." },
@@ -27,6 +29,7 @@ const QUESTIONS = [
   {
     id: 3,
     question: "A company is starting to use generative artificial intelligence (AI) on AWS. To ensure responsible AI practices, which tool can provide them with guidance and information?",
+    questionEs: "Una empresa está comenzando a usar inteligencia artificial generativa en AWS. Para garantizar prácticas de IA responsable, ¿qué herramienta puede brindarles orientación e información?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "AWS Marketplace", correct: false, reason: "Es un lugar para comprar/vender software y datos, no un recurso de guía sobre IA responsable." },
@@ -38,6 +41,7 @@ const QUESTIONS = [
   {
     id: 4,
     question: "What is the primary purpose of feature engineering in machine learning?",
+    questionEs: "¿Cuál es el propósito principal del feature engineering en machine learning?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "To ensure consistent performance of the model", correct: false, reason: "Eso corresponde al monitoreo del modelo, no a feature engineering." },
@@ -49,6 +53,7 @@ const QUESTIONS = [
   {
     id: 5,
     question: "A small company wants to use machine learning to predict customer churn, but they lack an expert dedicated data science team. Which AWS tool can help them build models easily without extensive coding?",
+    questionEs: "Una pequeña empresa quiere usar machine learning para predecir la fuga de clientes (churn), pero no cuenta con un equipo experto dedicado de ciencia de datos. ¿Qué herramienta de AWS puede ayudarles a construir modelos fácilmente sin necesidad de programar mucho?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon SageMaker JumpStart", correct: false, reason: "Ofrece modelos y plantillas pre-construidas, pero requiere más conocimiento técnico para adaptarlas y desplegarlas." },
@@ -60,6 +65,7 @@ const QUESTIONS = [
   {
     id: 6,
     question: "A financial institution is developing a fraud detection model. The project lead announced that they would be using MLOps. How would you explain MLOps in the context of this project?",
+    questionEs: "Una institución financiera está desarrollando un modelo de detección de fraude. El líder del proyecto anunció que usarían MLOps. ¿Cómo explicarías MLOps en el contexto de este proyecto?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "A tool for visualizing ML model performance", correct: false, reason: "Es demasiado limitado; MLOps no es solo una herramienta de visualización." },
@@ -71,6 +77,7 @@ const QUESTIONS = [
   {
     id: 7,
     question: "Which AWS service can be used to create a knowledge-based chatbot that can answer questions about a company's products and services, using the company's internal documents as a source of information?",
+    questionEs: "¿Qué servicio de AWS se puede usar para crear un chatbot basado en conocimiento que pueda responder preguntas sobre los productos y servicios de una empresa, usando los documentos internos de la empresa como fuente de información?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon SageMaker", correct: false, reason: "Requiere construir y entrenar un modelo desde cero; no es una solución lista para chatbots empresariales." },
@@ -82,6 +89,7 @@ const QUESTIONS = [
   {
     id: 8,
     question: "A development team needs to select a service for storing and querying vector embeddings. Which AWS service is best suited for this?",
+    questionEs: "Un equipo de desarrollo necesita seleccionar un servicio para almacenar y consultar embeddings vectoriales. ¿Qué servicio de AWS es el más adecuado para esto?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Glue Data Catalog", correct: false, reason: "Es un catálogo de metadatos para ETL, no almacena ni consulta embeddings vectoriales." },
@@ -93,6 +101,7 @@ const QUESTIONS = [
   {
     id: 9,
     question: "An organization wants to evaluate the security and compliance practices of AWS services used by vendors selling AI products. Which AWS service can help them access AWS compliance reports and certifications?",
+    questionEs: "Una organización quiere evaluar las prácticas de seguridad y cumplimiento de los servicios de AWS usados por proveedores que venden productos de IA. ¿Qué servicio de AWS puede ayudarles a acceder a los reportes de cumplimiento y certificaciones de AWS?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "AWS Organization", correct: false, reason: "Sirve para gestionar múltiples cuentas de AWS, no para acceder a reportes de cumplimiento." },
@@ -104,6 +113,7 @@ const QUESTIONS = [
   {
     id: 10,
     question: "A machine learning model performs well on training data but poorly on new data. What is the likely problem?",
+    questionEs: "Un modelo de machine learning funciona bien con los datos de entrenamiento pero mal con datos nuevos. ¿Cuál es el problema más probable?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Overfitting", correct: true, reason: "El modelo memorizó los datos de entrenamiento (baja bias, alta varianza) y no generaliza a datos nuevos." },
@@ -115,6 +125,7 @@ const QUESTIONS = [
   {
     id: 11,
     question: "A company wants to improve the quality of large language model (LLM) responses by accessing external information. Which method requires the least amount of development effort?",
+    questionEs: "Una empresa quiere mejorar la calidad de las respuestas de un modelo de lenguaje grande (LLM) accediendo a información externa. ¿Qué método requiere la menor cantidad de esfuerzo de desarrollo?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Few-Shot Learning", correct: false, reason: "Ayuda con ejemplos en el prompt, pero no conecta al modelo con información externa actualizada." },
@@ -126,6 +137,7 @@ const QUESTIONS = [
   {
     id: 12,
     question: "A model has been trained to recognize handwritten digits in images. However, the model is not accurate. A ML expert has advised that epoch value should be increased. What is epoch in the context of Machine Learning?",
+    questionEs: "Se ha entrenado un modelo para reconocer dígitos escritos a mano en imágenes. Sin embargo, el modelo no es preciso. Un experto en ML ha recomendado aumentar el valor de epoch. ¿Qué es un epoch en el contexto de Machine Learning?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "A measure of the accuracy of a model during training", correct: false, reason: "La precisión se mide con métricas de evaluación, no con el concepto de epoch." },
@@ -137,6 +149,7 @@ const QUESTIONS = [
   {
     id: 13,
     question: "Which of the following is considered a hyperparameter in a machine learning model?",
+    questionEs: "¿Cuál de las siguientes opciones se considera un hiperparámetro en un modelo de machine learning?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Weights of the neural network", correct: false, reason: "Los pesos son parámetros que el modelo aprende durante el entrenamiento, no hiperparámetros." },
@@ -148,6 +161,7 @@ const QUESTIONS = [
   {
     id: 14,
     question: "A model tends to give very similar outputs even when you vary the inputs slightly. Which inference time parameter can be adjusted to make it a little more creative?",
+    questionEs: "Un modelo tiende a dar salidas muy similares incluso cuando varías ligeramente las entradas. ¿Qué parámetro de tiempo de inferencia se puede ajustar para hacerlo un poco más creativo?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Learning Rate", correct: false, reason: "Es un hiperparámetro de entrenamiento, no se ajusta durante la inferencia." },
@@ -159,6 +173,7 @@ const QUESTIONS = [
   {
     id: 15,
     question: "You're evaluating a language generation model on various tasks related to text generation. To assess the quality of the generated text, which evaluation metric best measures its semantic similarity to human-written text?",
+    questionEs: "Estás evaluando un modelo de generación de lenguaje en varias tareas relacionadas con generación de texto. Para evaluar la calidad del texto generado, ¿qué métrica de evaluación mide mejor su similitud semántica con texto escrito por humanos?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "BERTScore", correct: true, reason: "Usa embeddings contextuales para medir similitud semántica real entre el texto generado y el de referencia." },
@@ -170,6 +185,7 @@ const QUESTIONS = [
   {
     id: 16,
     question: "A developer is designing an AI system and needs a solution that provides comprehensive tools for analyzing and explaining model predictions. Which AWS service is specifically designed to enhance transparency and explainability in this context?",
+    questionEs: "Un desarrollador está diseñando un sistema de IA y necesita una solución que ofrezca herramientas integrales para analizar y explicar las predicciones del modelo. ¿Qué servicio de AWS está específicamente diseñado para mejorar la transparencia y explicabilidad en este contexto?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon SageMaker Clarify", correct: true, reason: "Está diseñado específicamente para detectar sesgos y explicar las predicciones del modelo, mejorando la transparencia." },
@@ -181,6 +197,7 @@ const QUESTIONS = [
   {
     id: 17,
     question: "A company plans to train and build it's own Foundation Model. What are potential drawbacks of this approach against using a pre-trained Foundation Model? [Select Two]",
+    questionEs: "Una empresa planea entrenar y construir su propio modelo fundacional (Foundation Model). ¿Cuáles son las posibles desventajas de este enfoque frente a usar un modelo fundacional pre-entrenado? [Selecciona Dos]",
     type: "multi", pick: 2,
     options: [
       { key: "A", text: "More complex implementation process", correct: true, reason: "Construir un FM propio implica diseño de arquitectura, infraestructura masiva y expertise avanzado, mucho más complejo que usar uno ya entrenado." },
@@ -192,6 +209,7 @@ const QUESTIONS = [
   {
     id: 18,
     question: "A company wants to generate content using an existing popular pre-trained AI model. They have limited AI expertise and don't want to manage the model themselves. Which AWS service would best suit their needs?",
+    questionEs: "Una empresa quiere generar contenido usando un modelo de IA pre-entrenado ya popular. Tienen experiencia limitada en IA y no quieren gestionar el modelo ellos mismos. ¿Qué servicio de AWS se ajustaría mejor a sus necesidades?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon Textract", correct: false, reason: "Extrae texto de documentos; no genera contenido nuevo." },
@@ -203,6 +221,7 @@ const QUESTIONS = [
   {
     id: 19,
     question: "What type of training data would be most suitable to fine-tune a model to respond to questions in a certain format and style?",
+    questionEs: "¿Qué tipo de datos de entrenamiento sería más adecuado para hacer fine-tuning a un modelo para que responda preguntas en un formato y estilo determinados?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Columnar dataset", correct: false, reason: "Es un formato de datos tabulares, no relacionado con estilo de respuesta en texto." },
@@ -214,6 +233,7 @@ const QUESTIONS = [
   {
     id: 20,
     question: "A company needs to log API calls to Amazon Bedrock for compliance - including details about the API call, the user and the timestamp. Which AWS service can assist with this?",
+    questionEs: "Una empresa necesita registrar las llamadas a la API de Amazon Bedrock por motivos de cumplimiento, incluyendo detalles sobre la llamada a la API, el usuario y la marca de tiempo. ¿Qué servicio de AWS puede ayudar con esto?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "AWS CloudTrail", correct: true, reason: "Registra detalladamente cada llamada a la API, incluyendo el usuario y el timestamp, ideal para compliance." },
@@ -225,6 +245,7 @@ const QUESTIONS = [
   {
     id: 21,
     question: "A data science team wants to improve a model's performance. They want to increase the amount and diversity of data used for training and modify the algorithm's learning rate. Which combination of ML pipeline steps will meet these requirements? [Select Two]",
+    questionEs: "Un equipo de ciencia de datos quiere mejorar el rendimiento de un modelo. Quieren aumentar la cantidad y diversidad de los datos usados para el entrenamiento y modificar la tasa de aprendizaje (learning rate) del algoritmo. ¿Qué combinación de pasos del pipeline de ML cumplirá con estos requisitos? [Selecciona Dos]",
     type: "multi", pick: 2,
     options: [
       { key: "A", text: "Data Augmentation", correct: true, reason: "Aumenta la cantidad y diversidad de los datos de entrenamiento generando variaciones de los existentes." },
@@ -236,6 +257,7 @@ const QUESTIONS = [
   {
     id: 22,
     question: "A company wants to ensure that the content generated by their Amazon Bedrock-powered application adheres to their ethical guidelines and avoids harmful or offensive content. Which AWS service can help them implement these safeguards?",
+    questionEs: "Una empresa quiere asegurarse de que el contenido generado por su aplicación basada en Amazon Bedrock cumpla con sus lineamientos éticos y evite contenido dañino u ofensivo. ¿Qué servicio de AWS puede ayudarles a implementar estas salvaguardas?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon SageMaker", correct: false, reason: "Es una plataforma general de ML, no ofrece un mecanismo de filtrado de contenido dañino para Bedrock." },
@@ -247,6 +269,7 @@ const QUESTIONS = [
   {
     id: 23,
     question: "Your company is training a machine learning model on a dataset stored in S3 that contains sensitive customer information. How can you ensure that any sensitive information in the data is removed or anonymized before training the model? [Select Two]",
+    questionEs: "Tu empresa está entrenando un modelo de machine learning con un dataset almacenado en S3 que contiene información sensible de clientes. ¿Cómo puedes asegurarte de que cualquier información sensible en los datos sea eliminada o anonimizada antes de entrenar el modelo? [Selecciona Dos]",
     type: "multi", pick: 2,
     options: [
       { key: "A", text: "Use S3 encryption to protect the data at rest.", correct: false, reason: "Protege los datos de accesos no autorizados, pero no identifica ni elimina/anonimiza información sensible." },
@@ -258,6 +281,7 @@ const QUESTIONS = [
   {
     id: 24,
     question: "A company wants to use generative AI to create marketing slogans for their products. Why should the company carefully review all generated slogans?",
+    questionEs: "Una empresa quiere usar IA generativa para crear eslóganes de marketing para sus productos. ¿Por qué debería la empresa revisar cuidadosamente todos los eslóganes generados?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Generative AI may generate slogans that are too long and difficult to remember.", correct: false, reason: "Es una preocupación menor de estilo, no el motivo principal de revisión responsable." },
@@ -269,6 +293,7 @@ const QUESTIONS = [
   {
     id: 25,
     question: "Your company is training machine learning models on EC2 instances. You're concerned about the security of these models and want to identify potential vulnerabilities in the underlying infrastructure. Which AWS service can help you scan your EC2 instances for vulnerabilities?",
+    questionEs: "Tu empresa está entrenando modelos de machine learning en instancias EC2. Te preocupa la seguridad de estos modelos y quieres identificar posibles vulnerabilidades en la infraestructura subyacente. ¿Qué servicio de AWS puede ayudarte a escanear tus instancias EC2 en busca de vulnerabilidades?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "AWS X-Ray", correct: false, reason: "Traza y depura solicitudes distribuidas de aplicaciones, no escanea vulnerabilidades de infraestructura." },
@@ -280,6 +305,7 @@ const QUESTIONS = [
   {
     id: 26,
     question: "A machine learning model for loan approvals performs better for applicants from urban areas because the training data contains more approval examples from urban areas. What type of bias is this an example of?",
+    questionEs: "Un modelo de machine learning para aprobación de préstamos funciona mejor para solicitantes de áreas urbanas porque los datos de entrenamiento contienen más ejemplos de aprobación de áreas urbanas. ¿Qué tipo de sesgo (bias) ejemplifica esto?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Sampling bias", correct: true, reason: "El dataset de entrenamiento no representa equitativamente a todos los grupos (urbano vs. rural), lo cual es sampling bias." },
@@ -291,6 +317,7 @@ const QUESTIONS = [
   {
     id: 27,
     question: "For a dataset of social network connections where each user has relationships with multiple other users, which machine learning algorithm is most suitable for classifying these interconnected relationships into predefined categories?",
+    questionEs: "Para un dataset de conexiones de redes sociales donde cada usuario tiene relaciones con múltiples usuarios, ¿qué algoritmo de machine learning es el más adecuado para clasificar estas relaciones interconectadas en categorías predefinidas?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Linear Regression", correct: false, reason: "Predice valores continuos y no está diseñada para modelar relaciones interconectadas tipo grafo." },
@@ -302,6 +329,7 @@ const QUESTIONS = [
   {
     id: 28,
     question: "A robot is tasked with navigating a maze to reach a goal. Which machine learning paradigm would be most suitable for training the robot to learn the optimal path via self-learning trial and error?",
+    questionEs: "Un robot tiene la tarea de navegar un laberinto para llegar a una meta. ¿Qué paradigma de machine learning sería el más adecuado para entrenar al robot para que aprenda la ruta óptima mediante auto-aprendizaje por ensayo y error?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Supervised Learning", correct: false, reason: "Requiere datos etiquetados con la 'respuesta correcta', que no existen naturalmente para cada paso del laberinto." },
@@ -313,6 +341,7 @@ const QUESTIONS = [
   {
     id: 29,
     question: "A researcher wants to adapt a pre-trained machine learning model to perform well on a new domain-specific task with limited labeled data. Which of the following approaches would be most efficient & suitable?",
+    questionEs: "Un investigador quiere adaptar un modelo de machine learning pre-entrenado para que funcione bien en una nueva tarea específica de dominio con datos etiquetados limitados. ¿Cuál de los siguientes enfoques sería el más eficiente y adecuado?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Continued Pre-Training with additional unlabeled data", correct: false, reason: "Amplía el conocimiento general del modelo, pero no está tan enfocado en la tarea específica etiquetada." },
@@ -324,6 +353,7 @@ const QUESTIONS = [
   {
     id: 30,
     question: "If you are a small startup with unpredictable workloads and need to experiment with different foundation models, which pricing model would be most suitable for you on Amazon Bedrock?",
+    questionEs: "Si eres una pequeña startup con cargas de trabajo impredecibles y necesitas experimentar con diferentes modelos fundacionales, ¿qué modelo de precios sería el más adecuado para ti en Amazon Bedrock?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "On-Demand", correct: true, reason: "Es pago por uso, ideal para cargas impredecibles y para experimentar sin comprometerse a capacidad reservada." },
@@ -335,6 +365,7 @@ const QUESTIONS = [
   {
     id: 31,
     question: "In the context of natural language processing, which of the following is a fundamental unit of text used to represent words or subwords?",
+    questionEs: "En el contexto del procesamiento de lenguaje natural, ¿cuál de las siguientes opciones es una unidad fundamental de texto usada para representar palabras o subpalabras?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Token", correct: true, reason: "Un token es la unidad básica de texto (palabra o subpalabra) resultante de la tokenización." },
@@ -346,6 +377,7 @@ const QUESTIONS = [
   {
     id: 32,
     question: "A developer is creating an AI system to predict customer churn. To ensure transparency, they need to document key details about the model. Which AWS tool is best suited for this task?",
+    questionEs: "Un desarrollador está creando un sistema de IA para predecir la fuga de clientes (churn). Para garantizar la transparencia, necesita documentar detalles clave sobre el modelo. ¿Qué herramienta de AWS es la más adecuada para esta tarea?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon SageMaker Clarify", correct: false, reason: "Detecta sesgos y explica predicciones, pero no es la herramienta de documentación formal del modelo." },
@@ -357,6 +389,7 @@ const QUESTIONS = [
   {
     id: 33,
     question: "An engineer is training a Machine Learning Model. In order to prevent underfitting or overfitting, how should the model be trained with data?",
+    questionEs: "Un ingeniero está entrenando un modelo de Machine Learning. Para evitar el underfitting o el overfitting, ¿cómo debería entrenarse el modelo con los datos?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "With high bias and high variance", correct: false, reason: "Es la peor combinación posible: presenta ambos problemas (underfitting y overfitting) a la vez." },
@@ -368,6 +401,7 @@ const QUESTIONS = [
   {
     id: 34,
     question: "You're customizing a large language model for a specific domain. Which approach is most effective for tailoring the model's knowledge and accuracy to this domain?",
+    questionEs: "Estás personalizando un modelo de lenguaje grande para un dominio específico. ¿Qué enfoque es el más efectivo para adaptar el conocimiento y la precisión del modelo a este dominio?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Fine-Tuning", correct: true, reason: "Ajusta los pesos internos del modelo con datos del dominio, incorporando el conocimiento de forma permanente." },
@@ -379,6 +413,7 @@ const QUESTIONS = [
   {
     id: 35,
     question: "Which of the following is an example of hallucination in large language models (LLMs)?",
+    questionEs: "¿Cuál de las siguientes opciones es un ejemplo de alucinación (hallucination) en los modelos de lenguaje grande (LLMs)?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Overfitting", correct: false, reason: "Es un problema de memorización de datos de entrenamiento, un concepto distinto a la alucinación." },
@@ -390,6 +425,7 @@ const QUESTIONS = [
   {
     id: 36,
     question: "Which is a Foundation Model developed by Amazon, available via Bedrock?",
+    questionEs: "¿Cuál es un modelo fundacional (Foundation Model) desarrollado por Amazon, disponible a través de Bedrock?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon Titan", correct: true, reason: "Es la familia de modelos fundacionales desarrollada por Amazon, disponible en Bedrock." },
@@ -401,6 +437,7 @@ const QUESTIONS = [
   {
     id: 37,
     question: "Which of the following algorithms are commonly used for classification tasks in machine learning? [Select Two]",
+    questionEs: "¿Cuáles de los siguientes algoritmos se usan comúnmente para tareas de clasificación en machine learning? [Selecciona Dos]",
     type: "multi", pick: 2,
     options: [
       { key: "A", text: "Support Vector Machine (SVM)", correct: true, reason: "Es un algoritmo supervisado clásico usado ampliamente para tareas de clasificación." },
@@ -412,6 +449,7 @@ const QUESTIONS = [
   {
     id: 38,
     question: "Given a large dataset intended for inference, where latency is not a factor - which SageMaker model inference type (mode) would you choose for cost-effective predictions (inference)?",
+    questionEs: "Dado un dataset grande destinado a inferencia, donde la latencia no es un factor, ¿qué tipo (modo) de inferencia de modelo de SageMaker elegirías para predicciones (inferencia) rentables?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Real-time", correct: false, reason: "Mantiene un endpoint siempre activo, con mayor costo, pensado para baja latencia, no para el escenario descrito." },
@@ -423,6 +461,7 @@ const QUESTIONS = [
   {
     id: 39,
     question: "What is the primary purpose of Amazon Q Developer?",
+    questionEs: "¿Cuál es el propósito principal de Amazon Q Developer?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "To manage AWS infrastructure", correct: false, reason: "No es su función principal; existen otros servicios (como Config o Systems Manager) para gestionar infraestructura." },
@@ -434,6 +473,7 @@ const QUESTIONS = [
   {
     id: 40,
     question: "What kind of prompt attack is this: 'Explain why [the false statement] is true, considering that it's usually known to be false.'",
+    questionEs: "¿Qué tipo de ataque de prompt es este: 'Explica por qué [la afirmación falsa] es verdadera, considerando que usualmente se sabe que es falsa.'?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Jailbreaking", correct: false, reason: "Busca evadir por completo las restricciones de seguridad del modelo, no simplemente hacerlo defender una afirmación falsa." },
@@ -445,6 +485,7 @@ const QUESTIONS = [
   {
     id: 41,
     question: "You're building a text summarization tool. Which metric is best for measuring how well it captures the key points of the original text?",
+    questionEs: "Estás construyendo una herramienta de resumen de texto. ¿Qué métrica es la mejor para medir qué tan bien captura los puntos clave del texto original?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "BERTScore", correct: false, reason: "Mide similitud semántica general, pero no está especializado en evaluar recall de puntos clave en resúmenes." },
@@ -456,6 +497,7 @@ const QUESTIONS = [
   {
     id: 42,
     question: "An AI customer service agent, is unable to accurately identify Customer Intent based on Customer Message. You can improve it's performance by using training data in which format:",
+    questionEs: "Un agente de servicio al cliente de IA no puede identificar con precisión la intención del cliente (Customer Intent) a partir del mensaje del cliente. Puedes mejorar su rendimiento usando datos de entrenamiento en qué formato:",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Customer Message and Customer Intent", correct: true, reason: "Entrenar directamente con pares mensaje→intención enseña al modelo a identificar la intención a partir del mensaje del cliente." },
@@ -467,6 +509,7 @@ const QUESTIONS = [
   {
     id: 43,
     question: "How are users typically charged for using a foundation model? [Select Two]",
+    questionEs: "¿Cómo se les cobra típicamente a los usuarios por usar un modelo fundacional? [Selecciona Dos]",
     type: "multi", pick: 2,
     options: [
       { key: "A", text: "Number of Input Tokens", correct: true, reason: "Los proveedores de FMs (como Bedrock) cobran según la cantidad de tokens de entrada procesados." },
@@ -478,6 +521,7 @@ const QUESTIONS = [
   {
     id: 44,
     question: "Which AWS AI Service can be used to extract health data from unstructured text such as clinical notes & medical records?",
+    questionEs: "¿Qué servicio de IA de AWS se puede usar para extraer datos de salud de texto no estructurado, como notas clínicas y registros médicos?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon Comprehend Medical", correct: true, reason: "Está especializado en extraer entidades e información médica relevante de texto clínico no estructurado." },
@@ -489,6 +533,7 @@ const QUESTIONS = [
   {
     id: 45,
     question: "Which type of machine learning model is specifically designed to generate new data that resembles existing data?",
+    questionEs: "¿Qué tipo de modelo de machine learning está diseñado específicamente para generar nuevos datos que se asemejen a los datos existentes?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Autoencoder", correct: false, reason: "Se usa principalmente para compresión/reconstrucción de datos, no está optimizado para generar datos nuevos y diversos." },
@@ -500,6 +545,7 @@ const QUESTIONS = [
   {
     id: 46,
     question: "Users are going to use long prompts to ask questions from their Large Language Model. What key aspect should be considered while selecting the LLM to use?",
+    questionEs: "Los usuarios van a usar prompts largos para hacerle preguntas a su modelo de lenguaje grande. ¿Qué aspecto clave se debería considerar al elegir el LLM a usar?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Inference Latency", correct: false, reason: "Afecta la velocidad de respuesta, no la capacidad del modelo para procesar prompts largos." },
@@ -511,6 +557,7 @@ const QUESTIONS = [
   {
     id: 47,
     question: "Which of the following best describes the primary purpose of Amazon SageMaker Feature Store?",
+    questionEs: "¿Cuál de las siguientes describe mejor el propósito principal de Amazon SageMaker Feature Store?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "To automatically train and deploy machine learning models", correct: false, reason: "Esa función corresponde a SageMaker Autopilot o Pipelines, no a Feature Store." },
@@ -522,6 +569,7 @@ const QUESTIONS = [
   {
     id: 48,
     question: "A healthcare organization is developing an AI-powered diagnostic tool to assist in early detection of a rare disease. With respect to regulatory compliance concerns - which of the following is least relevant?",
+    questionEs: "Una organización de salud está desarrollando una herramienta de diagnóstico impulsada por IA para ayudar en la detección temprana de una enfermedad rara. Con respecto a las preocupaciones de cumplimiento regulatorio, ¿cuál de las siguientes es la menos relevante?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Ensuring the AI system is unbiased and does not discriminate against certain patient demographics.", correct: false, reason: "Es una preocupación central de cumplimiento regulatorio (equidad/fairness) en salud." },
@@ -533,6 +581,7 @@ const QUESTIONS = [
   {
     id: 49,
     question: "You're a large enterprise with a massive amount of unstructured data scattered across various internal systems. You want to provide your employees with a powerful search tool that can understand natural language queries and return accurate, relevant results. Which AWS service would best meet this need?",
+    questionEs: "Eres una gran empresa con una cantidad masiva de datos no estructurados dispersos en varios sistemas internos. Quieres brindarles a tus empleados una potente herramienta de búsqueda que pueda entender consultas en lenguaje natural y devolver resultados precisos y relevantes. ¿Qué servicio de AWS satisfaría mejor esta necesidad?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon Redshift", correct: false, reason: "Es un data warehouse para analítica sobre datos estructurados, no un motor de búsqueda en lenguaje natural." },
@@ -544,6 +593,7 @@ const QUESTIONS = [
   {
     id: 50,
     question: "A data scientist is working on a project that requires rapid prototyping and experimentation with various machine learning algorithms. Which AWS service would be most suitable for this task?",
+    questionEs: "Un científico de datos está trabajando en un proyecto que requiere prototipado rápido y experimentación con varios algoritmos de machine learning. ¿Qué servicio de AWS sería el más adecuado para esta tarea?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon SageMaker Ground Truth", correct: false, reason: "Es un servicio de etiquetado de datos, no de experimentación con algoritmos." },
@@ -555,6 +605,7 @@ const QUESTIONS = [
   {
     id: 51,
     question: "A large company wants to create an application for their Sales Managers - that can reason, perform multi-step tasks and provide insightful responses from their enterprise data. Which AWS service would be most suitable for this task?",
+    questionEs: "Una gran empresa quiere crear una aplicación para sus gerentes de ventas que pueda razonar, realizar tareas de varios pasos y proporcionar respuestas útiles a partir de sus datos empresariales. ¿Qué servicio de AWS sería el más adecuado para esta tarea?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon Lex", correct: false, reason: "Construye interfaces conversacionales básicas, sin capacidades de razonamiento multi-paso avanzado." },
@@ -566,6 +617,7 @@ const QUESTIONS = [
   {
     id: 52,
     question: "A company wants to analyze customer reviews to identify common themes and sentiments. Which AWS service can the company use to meet this requirement?",
+    questionEs: "Una empresa quiere analizar las reseñas de clientes para identificar temas y sentimientos comunes. ¿Qué servicio de AWS puede usar la empresa para cumplir con este requisito?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon Connect", correct: false, reason: "Es una plataforma de centro de contacto, no un servicio de análisis de texto." },
@@ -577,6 +629,7 @@ const QUESTIONS = [
   {
     id: 53,
     question: "A company wants to transform data from one format to another to prepare it for machine learning tasks. Which AWS service is best suited for this data transformation?",
+    questionEs: "Una empresa quiere transformar datos de un formato a otro para prepararlos para tareas de machine learning. ¿Qué servicio de AWS es el más adecuado para esta transformación de datos?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "AWS Glue", correct: true, reason: "Es el servicio ETL de AWS diseñado específicamente para transformar y preparar datos para su uso posterior, incluido ML." },
@@ -588,6 +641,7 @@ const QUESTIONS = [
   {
     id: 54,
     question: "A company wants to deploy a trained machine learning model for real-time inference. Which AWS service would be most suitable for this purpose?",
+    questionEs: "Una empresa quiere desplegar un modelo de machine learning entrenado para inferencia en tiempo real. ¿Qué servicio de AWS sería el más adecuado para este propósito?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon SageMaker JumpStart", correct: false, reason: "Provee plantillas/modelos pre-construidos, pero el despliegue en tiempo real se hace mediante Endpoints." },
@@ -599,6 +653,7 @@ const QUESTIONS = [
   {
     id: 55,
     question: "A company has deployed a machine learning model for customer sentiment analysis. To ensure the model's accuracy and reliability, which AWS services should be used for monitoring and human review? [Select Two]",
+    questionEs: "Una empresa ha desplegado un modelo de machine learning para análisis de sentimiento de clientes. Para garantizar la precisión y confiabilidad del modelo, ¿qué servicios de AWS deberían usarse para monitoreo y revisión humana? [Selecciona Dos]",
     type: "multi", pick: 2,
     options: [
       { key: "A", text: "Amazon Bedrock", correct: false, reason: "Da acceso a modelos fundacionales, pero no es una herramienta de monitoreo ni de revisión humana." },
@@ -610,6 +665,7 @@ const QUESTIONS = [
   {
     id: 56,
     question: "A ML specialist is training a large deep learning model on a massive dataset in Amazon SageMaker - a single GPU may not handle this well. Which SageMaker feature can help optimize the training process for large models and datasets?",
+    questionEs: "Un especialista en ML está entrenando un modelo grande de deep learning en un dataset masivo en Amazon SageMaker; una sola GPU podría no manejarlo bien. ¿Qué función de SageMaker puede ayudar a optimizar el proceso de entrenamiento para modelos y datasets grandes?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Incremental Training", correct: false, reason: "Permite continuar entrenando con nuevos datos, pero no resuelve la limitación de una sola GPU para modelos masivos." },
@@ -621,6 +677,7 @@ const QUESTIONS = [
   {
     id: 57,
     question: "You're working with a large dataset with many features. To improve your model's performance and computational efficiency, you need to simplify the data without losing significant information. Which technique would be most effective for achieving this goal?",
+    questionEs: "Estás trabajando con un dataset grande con muchas características (features). Para mejorar el rendimiento de tu modelo y la eficiencia computacional, necesitas simplificar los datos sin perder información significativa. ¿Qué técnica sería la más efectiva para lograr este objetivo?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Dimensionality Reduction", correct: true, reason: "Reduce el número de features conservando la información más relevante, mejorando eficiencia sin perder información significativa." },
@@ -632,6 +689,7 @@ const QUESTIONS = [
   {
     id: 58,
     question: "You want to generate highly detailed images based on text descriptions. Which AI model, specifically designed for generative tasks and capable of producing high-quality, diverse outputs, would be most suitable for this task?",
+    questionEs: "Quieres generar imágenes muy detalladas a partir de descripciones de texto. ¿Qué modelo de IA, diseñado específicamente para tareas generativas y capaz de producir salidas diversas y de alta calidad, sería el más adecuado para esta tarea?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Generative Adversarial Networks (GANs)", correct: false, reason: "Pueden generar imágenes, pero para generación detallada de imágenes a partir de texto, los modelos de difusión suelen ser más adecuados y son los destacados en este contexto." },
@@ -643,6 +701,7 @@ const QUESTIONS = [
   {
     id: 59,
     question: "A company has a system that generates vector embeddings from product data. They want to improve the speed and accuracy of finding similar products. Which AWS services are best suited for implementing vector search to optimize the system? [Select Three]",
+    questionEs: "Una empresa tiene un sistema que genera embeddings vectoriales a partir de datos de productos. Quieren mejorar la velocidad y precisión para encontrar productos similares. ¿Qué servicios de AWS son los más adecuados para implementar búsqueda vectorial y optimizar el sistema? [Selecciona Tres]",
     type: "multi", pick: 3,
     options: [
       { key: "A", text: "Amazon OpenSearch Service", correct: true, reason: "Tiene soporte nativo para búsqueda vectorial de alto rendimiento." },
@@ -654,6 +713,7 @@ const QUESTIONS = [
   {
     id: 60,
     question: "A bank receives numerous loan applications daily. The loan processing team manually extracts information from these applications, which is time-consuming. The goal is to automate this process using AI tools. Which AWS Service would be useful here?",
+    questionEs: "Un banco recibe numerosas solicitudes de préstamo a diario. El equipo de procesamiento de préstamos extrae manualmente la información de estas solicitudes, lo cual consume mucho tiempo. El objetivo es automatizar este proceso usando herramientas de IA. ¿Qué servicio de AWS sería útil aquí?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Amazon Rekognition", correct: false, reason: "Analiza imágenes y video (rostros, objetos), no está diseñado para extraer datos de formularios/documentos." },
@@ -665,6 +725,7 @@ const QUESTIONS = [
   {
     id: 61,
     question: "A healthcare company wants to develop a machine learning model to predict the likelihood of a patient developing diabetes based on various health indicators. Which of the following metrics would be most appropriate for evaluating the model's performance? [Select Two]",
+    questionEs: "Una empresa de salud quiere desarrollar un modelo de machine learning para predecir la probabilidad de que un paciente desarrolle diabetes en función de varios indicadores de salud. ¿Cuál de las siguientes métricas sería la más adecuada para evaluar el rendimiento del modelo? [Selecciona Dos]",
     type: "multi", pick: 2,
     options: [
       { key: "A", text: "Accuracy", correct: false, reason: "Puede ser engañosa cuando las clases están desbalanceadas (pocos casos positivos de diabetes), no es la más apropiada aquí." },
@@ -677,6 +738,7 @@ const QUESTIONS = [
   {
     id: 62,
     question: "An organization has trained a deep learning model on a large dataset of general images. They now want to apply the same model to classify medical images with a smaller (additional training) dataset. Which machine learning technique would be most suitable in this scenario?",
+    questionEs: "Una organización ha entrenado un modelo de deep learning en un dataset grande de imágenes generales. Ahora quieren aplicar el mismo modelo para clasificar imágenes médicas con un dataset adicional más pequeño de entrenamiento. ¿Qué técnica de machine learning sería la más adecuada en este escenario?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Reinforcement Learning", correct: false, reason: "Se basa en recompensas por acciones, no es aplicable a la reutilización de un modelo de clasificación de imágenes ya entrenado." },
@@ -688,6 +750,7 @@ const QUESTIONS = [
   {
     id: 63,
     question: "You are building a machine learning model on AWS and want to share it securely with a third-party partner. Which AWS service would you use to establish a private connection between your VPC and the partner's VPC, ensuring that the data remains within your AWS account and is not exposed to the public internet?",
+    questionEs: "Estás construyendo un modelo de machine learning en AWS y quieres compartirlo de forma segura con un socio externo (third-party). ¿Qué servicio de AWS usarías para establecer una conexión privada entre tu VPC y la VPC del socio, asegurando que los datos permanezcan dentro de tu cuenta de AWS y no queden expuestos a la internet pública?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "AWS Direct Connect", correct: false, reason: "Establece un enlace dedicado entre on-premises y AWS, no una conexión privada entre dos VPCs directamente." },
@@ -699,6 +762,7 @@ const QUESTIONS = [
   {
     id: 64,
     question: "You are training a machine learning model on sensitive customer data using AWS SageMaker. Under the AWS Shared Responsibility model, which of the following is primarily your responsibility?",
+    questionEs: "Estás entrenando un modelo de machine learning con datos sensibles de clientes usando AWS SageMaker. Bajo el modelo de Responsabilidad Compartida de AWS, ¿cuál de las siguientes es principalmente tu responsabilidad?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "Securing the AWS SageMaker infrastructure", correct: false, reason: "Es responsabilidad de AWS ('seguridad DE la nube'), no del cliente." },
@@ -710,6 +774,7 @@ const QUESTIONS = [
   {
     id: 65,
     question: "When implementing the Generative AI Security Scoping Matrix, which of the following factors should be assessed to determine the level of risk associated with a generative AI project?",
+    questionEs: "Al implementar la Generative AI Security Scoping Matrix, ¿cuál de los siguientes factores debería evaluarse para determinar el nivel de riesgo asociado con un proyecto de IA generativa?",
     type: "single", pick: 1,
     options: [
       { key: "A", text: "The model's computational efficiency", correct: false, reason: "Es una preocupación de rendimiento/costo, no un factor de riesgo de seguridad en la matriz." },

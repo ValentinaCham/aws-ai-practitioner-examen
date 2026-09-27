@@ -4,9 +4,13 @@
   --pink-strong: #ff6f9c;
   --pink-deep: #d63f77;
   --cream: #fff7f2;
-  --canela: #c68642;
-  --canela-dark: #8a5a28;
+  --canela: #d99a4e;
+  --canela-dark: #a8672e;
   --canela-belly: #e8c39e;
+  --canela-light: #f3d6a8;
+  --dog-outline: #3b2312;
+  --dog-blush: #ff8fa8;
+  --dog-tongue: #ff7d95;
   --green-ok: #3fae6a;
   --red-no: #e2536b;
   --text: #5a3145;
@@ -254,6 +258,16 @@ h1, h2, .brand-font {
   border: 2px solid var(--pink-mid);
 }
 
+.btn-translate {
+  background: var(--pink-light);
+  color: var(--pink-deep);
+  border: 2px dashed var(--pink-strong);
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
 .nav-buttons {
   display: flex;
   gap: 10px;
@@ -352,14 +366,14 @@ h1, h2, .brand-font {
 }
 
 .dachshund {
-  width: 160px;
+  width: 165px;
   height: auto;
   animation: bob 0.5s ease-in-out infinite alternate;
   filter: drop-shadow(0 6px 4px rgba(0,0,0,0.12));
 }
 
 .dachshund.small {
-  width: 110px;
+  width: 115px;
   opacity: 0.9;
 }
 
@@ -368,28 +382,48 @@ h1, h2, .brand-font {
   to   { transform: translateY(-4px); }
 }
 
-.dachshund .body { fill: var(--canela); }
-.dachshund .head { fill: var(--canela); }
-.dachshund .ear  { fill: var(--canela-dark); }
-.dachshund .tail { fill: var(--canela); }
-.dachshund .snout{ fill: var(--canela-belly); }
-.dachshund .nose { fill: #4a2f22; }
-.dachshund .eye  { fill: #2c1810; }
-.dachshund .leg  { fill: var(--canela-dark); transform-origin: top center; }
+/* Silueta base: sin stroke individual, el contorno grueso se logra
+   apilando sombras sin desenfoque en 8 direcciones (evita costuras
+   donde el cuerpo, cuello, cabeza, orejas, cola y patas se superponen) */
+.d-silhouette {
+  filter:
+    drop-shadow(3.6px 0px 0 var(--dog-outline))
+    drop-shadow(2.55px 2.55px 0 var(--dog-outline))
+    drop-shadow(0px 3.6px 0 var(--dog-outline))
+    drop-shadow(-2.55px 2.55px 0 var(--dog-outline))
+    drop-shadow(-3.6px 0px 0 var(--dog-outline))
+    drop-shadow(-2.55px -2.55px 0 var(--dog-outline))
+    drop-shadow(0px -3.6px 0 var(--dog-outline))
+    drop-shadow(2.55px -2.55px 0 var(--dog-outline));
+}
 
-.dachshund .leg-back-1  { animation: leg-swing 0.5s ease-in-out infinite; }
-.dachshund .leg-front-1 { animation: leg-swing 0.5s ease-in-out infinite; }
-.dachshund .leg-back-2  { animation: leg-swing-alt 0.5s ease-in-out infinite; }
-.dachshund .leg-front-2 { animation: leg-swing-alt 0.5s ease-in-out infinite; }
+.d-body, .d-neck, .d-head { fill: var(--canela); }
+.d-ear  { fill: var(--canela-dark); }
+.d-tail { fill: var(--canela); }
+.d-leg  { fill: var(--canela-dark); transform-box: fill-box; transform-origin: top center; }
+
+.d-leg-back1  { animation: leg-swing 0.5s ease-in-out infinite; }
+.d-leg-front1 { animation: leg-swing 0.5s ease-in-out infinite; }
+.d-leg-back2  { animation: leg-swing-alt 0.5s ease-in-out infinite; }
+.d-leg-front2 { animation: leg-swing-alt 0.5s ease-in-out infinite; }
 
 @keyframes leg-swing {
-  0%, 100% { transform: rotate(18deg); }
-  50%      { transform: rotate(-18deg); }
+  0%, 100% { transform: rotate(12deg); }
+  50%      { transform: rotate(-12deg); }
 }
 @keyframes leg-swing-alt {
-  0%, 100% { transform: rotate(-18deg); }
-  50%      { transform: rotate(18deg); }
+  0%, 100% { transform: rotate(-12deg); }
+  50%      { transform: rotate(12deg); }
 }
+
+/* Detalles de la carita: dibujados encima de la silueta, cada uno con
+   su propio trazo fino, como en un sticker tierno */
+.d-ear-inner { fill: var(--canela-light); stroke: var(--dog-outline); stroke-width: 2.4; }
+.d-muzzle    { fill: var(--canela-light); stroke: var(--dog-outline); stroke-width: 2.4; }
+.d-tongue    { fill: var(--dog-tongue); stroke: var(--dog-outline); stroke-width: 2.4; stroke-linejoin: round; }
+.d-blush     { fill: var(--dog-blush); opacity: 0.55; }
+.d-eye       { fill: none; stroke: var(--dog-outline); stroke-width: 3.2; stroke-linecap: round; }
+.d-nose      { fill: var(--dog-outline); }
 
 /* Corazones flotando de fondo */
 .hearts-field {
