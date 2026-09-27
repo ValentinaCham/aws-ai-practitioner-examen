@@ -88,6 +88,12 @@
     <span>💕</span><span>💗</span><span>🐾</span><span>💓</span><span>🐾</span><span>💖</span>
   </div>
 
+  <!-- Botón flotante: Cartas de Memoria para Mi Amorcito -->
+  <button id="flashcards-fab" class="flashcards-fab" title="Cartas de Memoria para Mi Amorcito" aria-label="Abrir Cartas de Memoria para Mi Amorcito">
+    <span class="flashcards-fab-icon" aria-hidden="true">🗂️</span>
+    <span class="flashcards-fab-label">Cartas</span>
+  </button>
+
   <div class="app">
     <header class="app-header">
       <h1>🌭💕 Guía de Amor y Estudio 💕🌭</h1>
@@ -122,7 +128,57 @@
 
   <div id="confetti-layer" aria-hidden="true"></div>
 
+  <!-- Modal: Cartas de Memoria para Mi Amorcito -->
+  <div id="flashcards-modal" class="flashcards-modal" hidden>
+    <div class="flashcards-modal-backdrop" data-fc-close></div>
+    <div class="flashcards-modal-content">
+      <button class="flashcards-close" data-fc-close aria-label="Cerrar">✕</button>
+      <h2 class="flashcards-title">🎴 Cartas de Memoria para Mi Amorcito 💌</h2>
+      <p class="flashcards-subtitle">Toca la carta para ver la explicación — así memorizas más rápido 🐾</p>
+
+      <div class="flashcards-controls">
+        <div class="flashcards-category-filter">
+          <button type="button" id="flashcards-category-btn" class="flashcards-category-btn">
+            💕 Todas las categorías ▾
+          </button>
+          <div id="flashcards-category-panel" class="flashcards-category-panel" hidden>
+            <div class="flashcards-category-quick-actions">
+              <button type="button" data-fc-cat-all>Seleccionar todas</button>
+              <button type="button" data-fc-cat-none>Ninguna</button>
+            </div>
+            <div id="flashcards-category-list" class="flashcards-category-list">
+              <!-- checkboxes de categorías generados por JS -->
+            </div>
+          </div>
+        </div>
+        <span id="flashcards-counter" class="flashcards-counter">1 / 1</span>
+      </div>
+
+      <div id="flashcard" class="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front">
+            <span class="flashcard-tag" id="flashcard-tag">Categoría</span>
+            <p class="flashcard-term" id="flashcard-term">Término</p>
+            <span class="flashcard-hint">💌 Toca para ver la explicación</span>
+          </div>
+          <div class="flashcard-face flashcard-back">
+            <p class="flashcard-definition" id="flashcard-definition">Definición</p>
+            <span class="flashcard-hint">💌 Toca para volver</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcards-nav">
+        <button id="flashcards-prev" class="btn btn-secondary">⬅️</button>
+        <button id="flashcards-shuffle" class="btn btn-secondary">🔀 Barajar</button>
+        <button id="flashcards-next" class="btn btn-secondary">➡️</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/questions.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/flashcards-data.js"></script>
+  <script src="js/flashcards.js"></script>
 </body>
 </html>
