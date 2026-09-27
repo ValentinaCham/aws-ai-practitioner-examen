@@ -90,7 +90,8 @@
 
   <!-- Botón flotante: Cartas de Memoria para Mi Amorcito -->
   <button id="flashcards-fab" class="flashcards-fab" title="Cartas de Memoria para Mi Amorcito" aria-label="Abrir Cartas de Memoria para Mi Amorcito">
-    🎴💌
+    <span class="flashcards-fab-icon" aria-hidden="true">🗂️</span>
+    <span class="flashcards-fab-label">Cartas</span>
   </button>
 
   <div class="app">
@@ -136,9 +137,20 @@
       <p class="flashcards-subtitle">Toca la carta para ver la explicación — así memorizas más rápido 🐾</p>
 
       <div class="flashcards-controls">
-        <select id="flashcards-category" class="flashcards-category-select">
-          <option value="all">💕 Todas las categorías</option>
-        </select>
+        <div class="flashcards-category-filter">
+          <button type="button" id="flashcards-category-btn" class="flashcards-category-btn">
+            💕 Todas las categorías ▾
+          </button>
+          <div id="flashcards-category-panel" class="flashcards-category-panel" hidden>
+            <div class="flashcards-category-quick-actions">
+              <button type="button" data-fc-cat-all>Seleccionar todas</button>
+              <button type="button" data-fc-cat-none>Ninguna</button>
+            </div>
+            <div id="flashcards-category-list" class="flashcards-category-list">
+              <!-- checkboxes de categorías generados por JS -->
+            </div>
+          </div>
+        </div>
         <span id="flashcards-counter" class="flashcards-counter">1 / 1</span>
       </div>
 

@@ -480,17 +480,32 @@ h1, h2, .brand-font {
   top: 18px;
   right: 18px;
   z-index: 40;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
   border: 2px solid var(--pink-mid);
   background: #fff;
-  font-size: 1.5rem;
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(214, 63, 119, 0.3);
   animation: fab-pulse 2.4s ease-in-out infinite;
 }
-.flashcards-fab:hover { transform: scale(1.08); }
+.flashcards-fab:hover { transform: scale(1.05); }
+
+.flashcards-fab-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.flashcards-fab-label {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--pink-deep);
+  white-space: nowrap;
+}
 
 @keyframes fab-pulse {
   0%, 100% { box-shadow: 0 6px 16px rgba(214, 63, 119, 0.3); }
@@ -562,9 +577,15 @@ h1, h2, .brand-font {
   margin-bottom: 16px;
 }
 
-.flashcards-category-select {
+.flashcards-category-filter {
+  position: relative;
   flex: 1;
-  padding: 8px 10px;
+  text-align: left;
+}
+
+.flashcards-category-btn {
+  width: 100%;
+  padding: 8px 12px;
   border-radius: 999px;
   border: 2px solid var(--pink-mid);
   background: #fff;
@@ -572,6 +593,76 @@ h1, h2, .brand-font {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flashcards-category-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: #fff;
+  border: 2px solid var(--pink-mid);
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(214, 63, 119, 0.25);
+  padding: 10px;
+  max-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+.flashcards-category-panel[hidden] { display: none; }
+
+.flashcards-category-quick-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.flashcards-category-quick-actions button {
+  flex: 1;
+  border: 2px solid var(--pink-mid);
+  background: var(--pink-light);
+  color: var(--pink-deep);
+  border-radius: 999px;
+  padding: 5px 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.flashcards-category-list {
+  overflow-y: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flashcards-category-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 6px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+.flashcards-category-item:hover { background: var(--pink-light); }
+
+.flashcards-category-item input {
+  accent-color: var(--pink-deep);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 .flashcards-counter {
@@ -666,6 +757,8 @@ h1, h2, .brand-font {
   .quiz-card { padding: 16px; }
   .dachshund { width: 110px; }
   .dachshund.small { width: 80px; }
-  .flashcards-fab { width: 48px; height: 48px; font-size: 1.25rem; top: 12px; right: 12px; }
+  .flashcards-fab { height: 38px; padding: 0 12px; top: 12px; right: 12px; }
+  .flashcards-fab-icon { font-size: 1.1rem; }
+  .flashcards-fab-label { font-size: 0.8rem; }
   .flashcard { height: 260px; }
 }
