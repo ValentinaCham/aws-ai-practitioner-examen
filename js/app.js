@@ -1,13 +1,31 @@
 (function () {
   "use strict";
 
-  const STORAGE_KEY = "aws-ai-practitioner-progress-v1";
+  const VERSION_KEY = "aws-ai-practitioner-current-version";
 
-  const state = {
-    current: 0,
-    answers: new Array(QUESTIONS.length).fill(null), // cada item: { selected: [keys], submitted: bool, correct: bool }
-    translated: new Array(QUESTIONS.length).fill(false), // true = mostrar questionEs en vez de question
+  const DATASETS = {
+    1: QUESTIONS_V1,
+    2: QUESTIONS_V2,
   };
+
+  // La Versión 1 conserva la clave original para no perder el progreso ya guardado.
+  function storageKeyFor(version) {
+    return version === 2
+      ? "aws-ai-practitioner-progress-v2-examen2"
+      : "aws-ai-practitioner-progress-v1";
+  }
+
+  let currentVersion = 1;
+  let QUESTIONS = DATASETS[currentVersion];
+  let state = createEmptyState(QUESTIONS);
+
+  function createEmptyState(questions) {
+    return {
+      current: 0,
+      answers: new Array(questions.length).fill(null), // cada item: { selected: [keys], submitted: bool, correct: bool }
+      translated: new Array(questions.length).fill(false), // true = mostrar questionEs en vez de question
+    };
+  }
 
   const quizCard = document.getElementById("quiz-card");
   const progressBarInner = document.getElementById("progress-bar-inner");
@@ -17,10 +35,11 @@
   const nextBtn = document.getElementById("next-btn");
   const restartBtn = document.getElementById("restart-btn");
   const confettiLayer = document.getElementById("confetti-layer");
+  const versionButtons = document.querySelectorAll(".version-btn");
 
   function loadProgress() {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
+      const raw = localStorage.getItem(storageKeyFor(currentVersion));
       if (!raw) return;
       const saved = JSON.parse(raw);
       if (saved && Array.isArray(saved.answers) && saved.answers.length === QUESTIONS.length) {
@@ -34,7 +53,25 @@
   }
 
   function saveProgress() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    localStorage.setItem(storageKeyFor(currentVersion), JSON.stringify(state));
+  }
+
+  function switchVersion(version) {
+    if (version === currentVersion) return;
+    currentVersion = version;
+    QUESTIONS = DATASETS[currentVersion];
+    state = createEmptyState(QUESTIONS);
+    loadProgress();
+    localStorage.setItem(VERSION_KEY, String(currentVersion));
+    updateVersionButtons();
+    renderQuestion();
+  }
+
+  function updateVersionButtons() {
+    versionButtons.forEach(btn => {
+      const isActive = Number(btn.dataset.version) === currentVersion;
+      btn.classList.toggle("active", isActive);
+    });
   }
 
   function getScore() {
@@ -317,6 +354,10 @@
     }
   }
 
+  versionButtons.forEach(btn => {
+    btn.addEventListener("click", () => switchVersion(Number(btn.dataset.version)));
+  });
+
   prevBtn.addEventListener("click", () => {
     if (state.current > 0) {
       state.current--;
@@ -343,6 +384,11 @@
     }
   });
 
+  const savedVersion = Number(localStorage.getItem(VERSION_KEY));
+  currentVersion = savedVersion === 2 ? 2 : 1;
+  QUESTIONS = DATASETS[currentVersion];
+  state = createEmptyState(QUESTIONS);
+  updateVersionButtons();
   loadProgress();
   renderQuestion();
 })();

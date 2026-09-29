@@ -76,6 +76,46 @@ h1, h2, .brand-font {
   opacity: 0.85;
 }
 
+/* ---------- Selector de versión del examen ---------- */
+
+.version-switcher {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.version-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 8px;
+  border-radius: 16px;
+  border: 2px solid var(--pink-mid);
+  background: #fff;
+  color: var(--pink-deep);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease, color 0.12s ease;
+}
+
+.version-btn:hover { transform: translateY(-1px); }
+
+.version-btn.active {
+  background: linear-gradient(90deg, var(--pink-strong), var(--pink-deep));
+  color: #fff;
+  border-color: var(--pink-deep);
+}
+
+.version-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
 /* ---------- Progress ---------- */
 
 .progress-section {

@@ -1,7 +1,7 @@
-/* Banco de preguntas AWS AI Practitioner - Examen de Práctica
+/* Banco de preguntas AWS AI Practitioner - Examen de Práctica (Versión 1, 65 preguntas)
    Cada pregunta: { id, question, type: 'single'|'multi', pick, options: [{key,text,correct,reason}] } */
 
-const QUESTIONS = [
+const QUESTIONS_V1 = [
   {
     id: 1,
     question: "An organization is developing a model to predict the price of a product based on various features like size, weight, brand and manufacturing date. Which machine learning approach would be best suited for this task?",
